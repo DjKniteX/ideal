@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon | HVAC Company</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1e88e5; /* blue */
+      --accent: #26c6da;  /* cool accent */
+      --bg-dark: #0f172a;
+      --text-light: #f8fafc;
+      --text-muted: #cbd5e1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      color: var(--text-light);
+      background: linear-gradient(135deg, #020617, var(--bg-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Background image layer */
+    .bg-image {
+      position: absolute;
+      inset: 0;
+      background: url("airconditioner.jpg") no-repeat center / contain;
+      opacity: 0.08; /* transparency */
+      pointer-events: none;
+    }
+
+    /* Overlay gradient for readability */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(30,136,229,0.15), transparent 60%);
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: rgba(38, 198, 218, 0.15);
+      border: 1px solid rgba(38, 198, 218, 0.35);
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* Mobile spacing */
+    @media (max-width: 480px) {
+      .container {
+        padding: 2rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Replace the image path below with your transparent HVAC/AC image -->
+  <div class="bg-image"></div>
+  <div class="overlay"></div>
+
+  <main class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <!-- Replace logo.png with your logo -->
+      <img src="ideal.png" alt="HVAC Company Logo">
+    </div>
+
+    <h1>We’re Building Something Cool</h1>
+
+    <p>
+      A new HVAC company is launching soon, focused on reliable comfort, modern
+      solutions, and energy‑efficient heating and cooling. From residential to
+      commercial systems, we’re preparing to bring quality service you can trust.
+    </p>
+
+    <span class="badge">Coming Soon</span>
+
+    <footer>
+      © 2026 Your HVAC Company. All rights reserved.
+    </footer>
+  </main>
+
+</body>
+</html>
