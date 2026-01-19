@@ -2,137 +2,310 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon | HVAC Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Residential HVAC Installation, Repair & Maintenance | Ideal Comfort HVAC</title>
+
+  <meta name="description" content="Ideal Comfort HVAC provides professional residential HVAC installation, repair, emergency service, and maintenance. Reliable comfort, energy efficiency, and quality workmanship you can trust.">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #1e88e5; /* blue */
-      --accent: #26c6da;  /* cool accent */
-      --bg-dark: #0f172a;
-      --text-light: #f8fafc;
-      --text-muted: #cbd5e1;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --brand-primary: #0d6efd;
+      --brand-secondary: #6c757d;
+      --brand-dark: #0b1c2d;
+      --brand-light: #f8f9fa;
+      --radius-lg: 0.75rem;
+      --radius-md: 0.5rem;
+      --shadow-soft: 0 8px 20px rgba(0,0,0,0.06);
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      color: var(--text-light);
-      background: linear-gradient(135deg, #020617, var(--bg-dark));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--brand-light);
+      color: var(--brand-dark);
     }
 
-    /* Background image layer */
-    .bg-image {
-      position: absolute;
-      inset: 0;
-      background: url("airconditioner.jpg") no-repeat center / contain;
-      opacity: 0.08; /* transparency */
-      pointer-events: none;
+    .btn-brand {
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+      border: none;
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 0.6rem 1.2rem;
+      font-weight: 500;
     }
 
-    /* Overlay gradient for readability */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top, rgba(30,136,229,0.15), transparent 60%);
+    .btn-brand:hover {
+      opacity: 0.9;
+      color: #fff;
     }
 
-    .container {
-      position: relative;
-      z-index: 2;
-      max-width: 720px;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
+    .card {
+      border: none;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
     }
 
-    .logo {
-      max-width: 180px;
-      margin: 0 auto 1.5rem;
+    .section-padding {
+      padding: 5rem 0;
     }
 
-    .logo img {
-      width: 100%;
-      height: auto;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
+    .navbar-brand {
       font-weight: 700;
-      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
     }
 
-    p {
-      font-size: clamp(1rem, 2.5vw, 1.125rem);
-      line-height: 1.6;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 0.5rem 1.25rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--primary);
-      background: rgba(38, 198, 218, 0.15);
-      border: 1px solid rgba(38, 198, 218, 0.35);
+    .hero {
+      background: radial-gradient(circle at top right, rgba(79,70,229,0.15), transparent 60%),
+                  radial-gradient(circle at bottom left, rgba(6,182,212,0.15), transparent 60%);
     }
 
     footer {
-      margin-top: 2.5rem;
-      font-size: 0.8rem;
-      color: #94a3b8;
-    }
-
-    /* Mobile spacing */
-    @media (max-width: 480px) {
-      .container {
-        padding: 2rem 1.25rem;
-      }
+      background-color: #020617;
+      color: #cbd5f5;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Replace the image path below with your transparent HVAC/AC image -->
-  <div class="bg-image"></div>
-  <div class="overlay"></div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand" href="#">Ideal Comfort HVAC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Our Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-brand" href="#contact">Request Service</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <main class="container">
-    <!-- Logo -->
-    <div class="logo">
-      <!-- Replace logo.png with your logo -->
-      <img src="ideal.png" alt="HVAC Company Logo">
+<!-- HERO -->
+<section class="hero section-padding">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-5 mb-3">
+          Residential HVAC Installation, Repair & Maintenance
+        </h1>
+        <p class="lead text-muted mb-4">
+          Ideal Comfort HVAC delivers professional residential HVAC services focused on
+          long-term comfort, energy efficiency, and dependable performance.
+        </p>
+        <a href="#contact" class="btn btn-brand btn-lg">Schedule Service</a>
+      </div>
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+        <div class="card p-4">
+          <img class="img-fluid rounded mb-3" src="images/ton.jpeg" alt="Residential HVAC installation">
+          <p class="small text-muted">Professional residential HVAC services</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-padding bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our HVAC Services</h2>
+      <p class="text-muted">
+        Complete residential heating and cooling solutions
+      </p>
     </div>
 
-    <h1>We’re Building Something Cool</h1>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 fw-semibold">HVAC Installation Services</h3>
+          <p class="text-muted">
+            High-quality residential HVAC installations designed for proper system sizing,
+            balanced airflow, and maximum energy efficiency. Every installation follows
+            manufacturer guidelines and local code requirements.
+          </p>
+        </div>
+      </div>
 
-    <p>
-      A new HVAC company is launching soon, focused on reliable comfort, modern
-      solutions, and energy‑efficient heating and cooling. From residential to
-      commercial systems, we’re preparing to bring quality service you can trust.
-    </p>
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 fw-semibold">HVAC Repair & Emergency Service</h3>
+          <p class="text-muted">
+            Fast and dependable HVAC repair services when comfort matters most.
+            We diagnose issues accurately and provide reliable, long-term repair solutions
+            for heating and cooling systems.
+          </p>
+        </div>
+      </div>
 
-    <span class="badge">Coming Soon</span>
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 fw-semibold">HVAC Maintenance Services</h3>
+          <p class="text-muted">
+            Prevent unexpected breakdowns and extend system life with routine HVAC
+            maintenance. Our inspections and cleanings improve efficiency and reliability
+            year-round.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-      © 2026 Your HVAC Company. All rights reserved.
-    </footer>
-  </main>
+<!-- WORK -->
+<section id="work" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Recent HVAC Projects</h2>
+      <p class="text-muted">
+        Residential HVAC installations and service work
+      </p>
+    </div>
 
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <img src="images/project1.jpeg" class="img-fluid rounded mb-3" alt="HVAC system installation">
+          <h3 class="h6 fw-semibold">Complete HVAC Installation</h3>
+          <p class="text-muted">
+            Full residential system installation focused on efficiency and long-term comfort.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <img src="images/project2.jpeg" class="img-fluid rounded mb-3" alt="Energy efficient HVAC upgrade">
+          <h3 class="h6 fw-semibold">High-Efficiency Upgrade</h3>
+          <p class="text-muted">
+            HVAC upgrade improving airflow, performance, and energy savings.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <img src="images/project3.jpeg" class="img-fluid rounded mb-3" alt="HVAC maintenance service">
+          <h3 class="h6 fw-semibold">Preventative Maintenance</h3>
+          <p class="text-muted">
+            Routine HVAC maintenance ensuring safe operation and extended system life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section-padding bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Customer Reviews</h2>
+      <p class="text-muted">
+        Honest feedback from homeowners we’ve served
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card p-4 text-center">
+          <h3 class="h5 fw-semibold mb-2">Coming Soon</h3>
+          <p class="text-muted mb-0">
+            Customer reviews will be added as we continue serving homeowners
+            with quality HVAC installation, repair, and maintenance services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold">Why Choose Ideal Comfort HVAC</h2>
+        <p class="text-muted">
+          We specialize in residential HVAC services with a focus on quality workmanship,
+          clear communication, and reliable results. Every project is completed using
+          industry best practices and attention to detail.
+        </p>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2">✔ Proper system sizing and airflow balance</li>
+          <li class="mb-2">✔ Clean, professional installations</li>
+          <li class="mb-2">✔ Honest recommendations and dependable service</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-4">
+          <p class="mb-0 text-muted">
+            Our goal is to provide homeowners with peace of mind knowing their HVAC
+            system is operating safely, efficiently, and reliably year-round.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-padding bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Ideal Comfort HVAC</h2>
+      <p class="text-muted">
+        Have a question or need service? Reach out to us directly by email.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card p-4 text-center">
+          <h3 class="h5 fw-semibold mb-3">Email Us</h3>
+          <p class="text-muted mb-4">
+            Send us a message and we’ll respond as soon as possible.
+          </p>
+
+          <a href="mailto:service@idealcomforthvac.com?subject=HVAC%20Service%20Request"
+             class="btn btn-brand btn-lg w-100">
+            service@idealcomforthvac.com
+          </a>
+
+          <p class="small text-muted mt-3">
+            Please include your name, city, and a brief description of the service needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<!-- FOOTER -->
+<footer class="py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <p class="mb-2 mb-md-0">© 2026 Ideal Comfort HVAC. All rights reserved.</p>
+    <div>
+      <a href="privacy.html" class="text-decoration-none text-light me-3">Privacy Policy</a>
+      <a href="terms.html" class="text-decoration-none text-light">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
