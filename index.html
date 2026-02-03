@@ -7,7 +7,6 @@
   <title>Residential HVAC Installation, Repair & Maintenance | Ideal Comfort HVAC</title>
 
   <meta name="description" content="Ideal Comfort HVAC provides professional residential HVAC installation, repair, emergency service, and maintenance. Reliable comfort, energy efficiency, and quality workmanship you can trust.">
-  <!-- Small change -->
 
   <!-- Bootstrap 5.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,11 +41,15 @@
       border-radius: var(--radius-md);
       padding: 0.6rem 1.2rem;
       font-weight: 500;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
     }
 
     .btn-brand:hover {
       opacity: 0.9;
       color: #fff;
+        transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.35);
     }
 
     .card {
@@ -65,20 +68,22 @@
     }
 
 .hero {
-  position: relative; /* needed for overlay */
+    position: relative;
+  color: #fff;
   background-image: url('IMG_7494.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(0,0,0,0.4); /* dark overlay */
   background-blend-mode: darken; /* blends image + color */
-  color: white;
 }
 
 /* Dark overlay */
 .hero::before {
   content: "";
   position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.4); /* adjust 0.4 for darkness */
@@ -88,13 +93,29 @@
 /* Make text appear above overlay */
 .hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
     footer {
       background-color: #020617;
       color: #cbd5f5;
     }
+
+    /* Premium card hover effect */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 767px) {
+  #hcp-lead-iframe {
+    display: none;
+  }
+}
   </style>
 </head>
 
@@ -133,14 +154,18 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <h1 class="display-5 mb-3">
-          Residential HVAC Installation, Repair & Maintenance
-        </h1>
-        <p class="mb-4">
-          Ideal Comfort HVAC delivers professional residential HVAC services focused on
-          long-term comfort, energy efficiency, and dependable performance.
-        </p>
-        <a href="#contact" class="btn btn-brand btn-lg">Schedule Service</a>
+<h1 class="display-5 mb-3">
+  Reliable Residential HVAC Services You Can Trust
+</h1>
+
+<p class="lead text-muted mb-4">
+  Professional HVAC installation, repair, and maintenance designed for comfort,
+  efficiency, and peace of mind — backed by dependable service and honest workmanship.
+</p>
+
+<a href="#contact" class="btn btn-brand btn-lg">
+  Schedule Service
+</a>
       </div>
     </div>
   </div>
@@ -303,33 +328,60 @@
 <!-- CONTACT -->
 <section id="contact" class="section-padding bg-white">
   <div class="container">
+
+    <!-- Section Header -->
     <div class="text-center mb-5">
       <h2 class="fw-bold">Contact Ideal Comfort HVAC</h2>
       <p class="text-muted">
-        Have a question or need service? Reach out to us directly by email or book an appointment with us.
+        Have a question or need service? Choose the option that works best for you.
       </p>
     </div>
-    
 
-    <div class="row justify-content-center">
-            <div class="col-lg-6">
-        <div class="card p-4 text-center">
-          <h3 class="h5 fw-semibold mb-3">Book An Appointment</h3>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Book Appointment -->
+      <div class="col-lg-4">
+        <div class="card p-4 text-center h-100">
+          <h3 class="h5 fw-semibold mb-3">Book an Appointment</h3>
           <p class="text-muted mb-4">
             Schedule your service today and explore our full range of HVAC solutions.
           </p>
-<!--Start of Housecallpro Online booking button--> <button data-token="5d7e7587ed624eb1988aa01a2368d86c" data-orgname="Ideal-Comfort-LLC" class="hcp-button" onClick="HCPWidget.openModal()"> Book online </button> <script async src="https://online-booking.housecallpro.com/script.js?token=5d7e7587ed624eb1988aa01a2368d86c&orgName=Ideal-Comfort-LLC"> </script> <!--End of Housecallpro Online booking button-->
+
+          <button
+            data-token="5d7e7587ed624eb1988aa01a2368d86c"
+            data-orgname="Ideal-Comfort-LLC"
+            class="hcp-button btn btn-brand btn-lg w-100"
+            onclick="HCPWidget.openModal()">
+            Book Online
+          </button>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="card p-4 text-center">
+
+      <!-- Lead Capture Form -->
+      <div class="col-lg-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 fw-semibold mb-3 text-center">Request Service</h3>
+
+          <iframe
+            id="hcp-lead-iframe"
+            src="https://book.housecallpro.com/lead-form/Ideal-Comfort-LLC/7e81a5d3d58b4665b40ffcb29a821616"
+            style="border:none; width:100%; height:420px;"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Email Us -->
+      <div class="col-lg-4">
+        <div class="card p-4 text-center h-100">
           <h3 class="h5 fw-semibold mb-3">Email Us</h3>
           <p class="text-muted mb-4">
             Send us a message and we’ll respond as soon as possible.
           </p>
 
-          <a href="mailto:service@idealcomforthvac.com?subject=HVAC%20Service%20Request"
-             class="btn btn-brand btn-lg w-100">
+          <a
+            href="mailto:service@idealcomforthvac.com?subject=HVAC%20Service%20Request"
+            class="btn btn-brand btn-lg w-100">
             service@idealcomforttexas.com
           </a>
 
@@ -338,10 +390,11 @@
           </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-</section>
+
 <!-- FOOTER -->
 <footer class="py-4">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -353,12 +406,14 @@
   </div>
 </footer>
 
+<!-- Housecall Pro Scripts -->
+<script async src="https://online-booking.housecallpro.com/script.js?token=5d7e7587ed624eb1988aa01a2368d86c&orgName=Ideal-Comfort-LLC"></script>
+<script async src="https://online-booking.housecallpro.com/script.js?token=7e81a5d3d58b4665b40ffcb29a821616&orgName=Ideal-Comfort-LLC"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#0E6FBE" data-organization="50eb980d-8f75-44ed-b635-851fe66f5fda" defer></script>
+<script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#0E6FBE" data-organization="50eb980d-8f75-44ed-b635-851fe66f5fda" defer></script>
 </body>
 </html>
-
-
 
 
 
