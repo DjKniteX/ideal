@@ -335,34 +335,54 @@
     </div>
   </div>  
 
-<!-- BOOKING -->
+<!-- BOOKING + CONTACT -->
 <section class="section-padding bg-light">
   <div class="container">
     
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        
-        <div class="card p-5 text-center">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Booking Card -->
+      <div class="col-lg-5">
+        <div class="card p-5 text-center h-100">
           <h2 class="fw-bold mb-3" style="color: var(--brand-blue);">
-            Book Your Service Online
+            Book Online
           </h2>
 
           <p class="text-muted mb-4">
-            Schedule your HVAC service quickly and easily using our online booking system.
+            Schedule your HVAC service quickly using our online booking system.
           </p>
 
-          <!-- Styled Button -->
           <button 
-            data-token="5d7e7587ed624eb1988aa01a2368d86c"
-            data-orgname="Ideal-Comfort"
-            class="btn btn-brand btn-lg w-100"
-            onclick="HCPWidget.openModal()">
+            id="book-now-btn"
+            class="btn btn-brand btn-lg w-100">
             Book Online Now
           </button>
-
         </div>
-
       </div>
+
+      <!-- Contact Card -->
+      <div class="col-lg-5">
+        <div class="card p-5 text-center h-100">
+          <h2 class="fw-bold mb-3" style="color: var(--brand-blue);">
+            Prefer to Talk?
+          </h2>
+
+          <p class="text-muted mb-4">
+            Call or email us and we’ll help you schedule your service.
+          </p>
+
+          <!-- Phone -->
+          <a href="tel:+16822353563" class="btn btn-brand btn-lg w-100 mb-3">
+            (682) 235-3563
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:idealcomforttexas@gmail.com" class="btn btn-outline-secondary w-100">
+            idealcomforttexas@gmail.com
+          </a>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -380,8 +400,8 @@
     </footer>
 
     <!-- Housecall Pro Scripts -->
-    <script async src="https://online-booking.housecallpro.com/script.js?token=5d7e7587ed624eb1988aa01a2368d86c&orgName=Ideal-Comfort-LLC"></script>
-    <script async src="https://online-booking.housecallpro.com/script.js?token=7e81a5d3d58b4665b40ffcb29a821616&orgName=Ideal-Comfort-LLC"></script>
+    <!-- <script async src="https://online-booking.housecallpro.com/script.js?token=5d7e7587ed624eb1988aa01a2368d86c&orgName=Ideal-Comfort-LLC"></script>
+    <script async src="https://online-booking.housecallpro.com/script.js?token=7e81a5d3d58b4665b40ffcb29a821616&orgName=Ideal-Comfort-LLC"></script> -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
