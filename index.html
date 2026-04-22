@@ -351,12 +351,16 @@
           <p class="text-muted mb-4">
             Schedule your HVAC service quickly using our online booking system.
           </p>
-
-          <button 
-            id="book-now-btn"
-            class="btn btn-brand btn-lg w-100">
-            Book Online Now
-          </button>
+          <!-- Booking Button -->
+<div class="d-flex justify-content-center">
+  <button 
+    data-token="5d7e7587ed624eb1988aa01a2368d86c" 
+    data-orgname="Ideal-Comfort-LLC"
+    class="btn btn-brand btn-lg"
+    onclick="if(window.HCPWidget){HCPWidget.openModal();}">
+    Book Online
+  </button>
+</div>
         </div>
       </div>
 
@@ -402,6 +406,7 @@
     <!-- Housecall Pro Scripts -->
     <!-- <script async src="https://online-booking.housecallpro.com/script.js?token=5d7e7587ed624eb1988aa01a2368d86c&orgName=Ideal-Comfort-LLC"></script>
     <script async src="https://online-booking.housecallpro.com/script.js?token=7e81a5d3d58b4665b40ffcb29a821616&orgName=Ideal-Comfort-LLC"></script> -->
+    <script src="https://online-booking.housecallpro.com/script.js?token=5d7e7587ed624eb1988aa01a2368d86c&orgName=Ideal-Comfort-LLC"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
